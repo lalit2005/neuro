@@ -1,1 +1,1 @@
-a place to put all my tiny experiments related to neural networks, deep learning and other ai-ml concepts
+a place to put all my experiments related to neural networks, deep learning and other ml related stuff
