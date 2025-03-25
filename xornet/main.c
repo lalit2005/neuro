@@ -16,7 +16,7 @@ double d_sigmoid(double x) { return x * (1 - x); }
 void shuffle(int *array, size_t n) {
   if (n > 1) {
     for (size_t i = 0; i < n - 1; i++) {
-      size_t j = i + rand() / (RAND_MAX / (n - 1) + 1);
+      size_t j = i + rand() % (n - i);
       int t = array[j];
       array[j] = array[i];
       array[i] = t;
@@ -74,7 +74,7 @@ int main() {
   }
 
   int training_set_order[] = {0, 1, 2, 3};
-  int number_of_epochs = 10;
+  int number_of_epochs = 10000;
 
   // train the neural net for `number_of_epochs` times
   for (int epoch = 0; epoch < number_of_epochs; epoch++) {

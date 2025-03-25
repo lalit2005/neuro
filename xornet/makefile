@@ -1,12 +1,14 @@
+CFLAGS = -Wall -Wextra -g
+
 compile:
-	gcc main.c
+	gcc $(CFLAGS) main.c -o xornet -lm
 
 execute:
-	./a.out
+	./xornet
 
 clean:
-	rm a.out
+	rm xornet
 
-run:
-	make compile && make execute && make clean
+run: compile execute clean
 
+.PHONY: compile execute clean run
